@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Kimondo</string>
+
+<!--    MENU STRINGS-->
+    <string name="menu_home">HOME</string>
+    <string name="menu_search">SEARCH</string>
+    <string name="menu_neos">NEAR EARTH OBJECTS</string>
+    <string name="menu_rover_photos">MARS ROVER PHOTOS</string>
+
+<!--    APOD STRINGS-->
+    <string name="apod_desc">Astronomy Picture of the Day</string>
+
+<!--    NEOWs STRINGS-->
+    <string name="hazardous">HAZARDOUS</string>
+    <string name="non_hazardous">NON-HAZARDOUS</string>
+    <string name="absolute_magnitude">ABSOLUTE MAGNITUDE: %f</string>
+
+</resources>

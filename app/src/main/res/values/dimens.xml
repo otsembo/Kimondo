@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    APOD DIMENSIONS-->
+    <dimen name="apod_height">250dp</dimen>
+    <dimen name="apod_explanation_date_margin">48dp</dimen>
+
+<!--    GENERAL DIMENSIONS-->
+    <dimen name="image_text_vertical_margin">16dp</dimen>
+    <dimen name="global_margin">16dp</dimen>
+    <dimen name="text_text_vertical_margin">8dp</dimen>
+
+<!--    TEXT DIMENSIONS-->
+    <dimen name="text_title">24sp</dimen>
+    <dimen name="text_subtitle">20sp</dimen>
+    <dimen name="text_general">16sp</dimen>
+
+<!--    CARD DIMENSIONS-->
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="card_content_padding">8dp</dimen>
+
+</resources>
