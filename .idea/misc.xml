@@ -12,7 +12,7 @@
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.36822916666666666" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.30141085934159895" />
         <entry key="app/src/main/res/layout/mars_rover_details.xml" value="0.18359375" />
-        <entry key="app/src/main/res/layout/mars_rover_item.xml" value="0.12239583333333333" />
+        <entry key="app/src/main/res/layout/mars_rover_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/neo_details.xml" value="0.3671875" />
         <entry key="app/src/main/res/layout/neo_item.xml" value="0.44" />
         <entry key="app/src/main/res/layout/search_details.xml" value="0.88125" />

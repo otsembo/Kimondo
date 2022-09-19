@@ -15,6 +15,7 @@ interface NasaService {
     @GET("/neo/rest/v1/feed")
     suspend fun getNeoWs(@Query("start_date") start: String, @Query("end_date") end: String): NeoWsDTO
 
+    // TODO: ADD DATE FUNCTIONALITY
     @GET("/mars-photos/api/v1/rovers/curiosity/photos")
     suspend fun getMarsPhotos(@Query("sol") sol: Int =  1000): MarsRoverPhotos
 

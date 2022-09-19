@@ -2,7 +2,7 @@
 <resources>
 <!--    APOD DIMENSIONS-->
     <dimen name="apod_height">250dp</dimen>
-    <dimen name="apod_explanation_date_margin">48dp</dimen>
+    <dimen name="apod_explanation_date_margin">24dp</dimen>
 
 <!--    GENERAL DIMENSIONS-->
     <dimen name="image_text_vertical_margin">16dp</dimen>
@@ -17,5 +17,8 @@
 <!--    CARD DIMENSIONS-->
     <dimen name="card_margin">8dp</dimen>
     <dimen name="card_content_padding">8dp</dimen>
+
+<!--    MARS ROVER DIMENSIONS-->
+    <dimen name="rover_img_height">250dp</dimen>
 
 </resources>

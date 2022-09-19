@@ -9,11 +9,16 @@
     <fragment
         android:id="@+id/fragment_home"
         android:name="com.otsembo.kimondo.ui.main.home.HomeFragment"
-        android:label="HomeFragment"
+        android:label="@string/home_page"
         tools:layout="@layout/fragment_home"/>
     <fragment
         android:id="@+id/fragment_neos"
         android:name="com.otsembo.kimondo.ui.main.neo.NeoFragment"
-        android:label="NeoFragment"
+        android:label="@string/neos_page"
         tools:layout="@layout/fragment_neo_list"/>
+    <fragment
+        android:id="@+id/fragment_rover_photos"
+        android:name="com.otsembo.kimondo.ui.main.marsrover.MarsRoverFragment"
+        android:label="@string/rover_page"
+        tools:layout="@layout/fragment_mars_rover_list"/>
 </navigation>

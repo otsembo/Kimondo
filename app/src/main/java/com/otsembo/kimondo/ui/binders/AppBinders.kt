@@ -1,5 +1,6 @@
 package com.otsembo.kimondo.ui.binders
 
+import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
@@ -10,7 +11,11 @@ import coil.load
 import com.google.android.material.chip.Chip
 import com.otsembo.kimondo.R
 import com.otsembo.kimondo.data.model.NearEarthObject
+import com.otsembo.kimondo.data.model.RoverPhoto
+import com.otsembo.kimondo.ui.main.marsrover.MarsRoverAdapter
 import com.otsembo.kimondo.ui.main.neo.NeoAdapter
+
+const val TAG = "APP-BINDERS"
 
 @BindingAdapter("kimondoImage")
 fun ImageView.setKimondoImage(imageUrl: String?){
@@ -38,4 +43,9 @@ fun TextView.setMagnitude(magnitude: Double){
 @BindingAdapter("neoList")
 fun RecyclerView.setNeoList(neos: List<NearEarthObject>?){
     (this.adapter as NeoAdapter).submitList(neos)
+}
+
+@BindingAdapter("roverPhotoList")
+fun RecyclerView.setRoverPhotoList(photos: List<RoverPhoto>?){
+    (this.adapter as MarsRoverAdapter).submitList(photos)
 }

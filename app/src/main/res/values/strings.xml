@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Kimondo</string>
 
+<!--    PAGE TITLES-->
+    <string name="home_page">HOME</string>
+    <string name="search_page">SEARCH</string>
+    <string name="rover_page">MARS ROVER PHOTOS</string>
+    <string name="neos_page">NEAR EARTH OBJECTS</string>
+
 <!--    MENU STRINGS-->
     <string name="menu_home">HOME</string>
     <string name="menu_search">SEARCH</string>
@@ -14,5 +20,8 @@
     <string name="hazardous">HAZARDOUS</string>
     <string name="non_hazardous">NON-HAZARDOUS</string>
     <string name="absolute_magnitude">ABSOLUTE MAGNITUDE: %f</string>
+
+<!--    MARS ROVER STRINGS-->
+    <string name="photo_desc">Mars rover image</string>
 
 </resources>
