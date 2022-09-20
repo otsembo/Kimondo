@@ -12,8 +12,10 @@ import com.google.android.material.chip.Chip
 import com.otsembo.kimondo.R
 import com.otsembo.kimondo.data.model.NearEarthObject
 import com.otsembo.kimondo.data.model.RoverPhoto
+import com.otsembo.kimondo.data.model.SearchData
 import com.otsembo.kimondo.ui.main.marsrover.MarsRoverAdapter
 import com.otsembo.kimondo.ui.main.neo.NeoAdapter
+import com.otsembo.kimondo.ui.main.search.SearchDataAdapter
 
 const val TAG = "APP-BINDERS"
 
@@ -48,4 +50,9 @@ fun RecyclerView.setNeoList(neos: List<NearEarthObject>?){
 @BindingAdapter("roverPhotoList")
 fun RecyclerView.setRoverPhotoList(photos: List<RoverPhoto>?){
     (this.adapter as MarsRoverAdapter).submitList(photos)
+}
+
+@BindingAdapter("searchList")
+fun RecyclerView.setSearchList(searchDataList: List<SearchData>?){
+    (this.adapter as SearchDataAdapter).submitList(searchDataList)
 }

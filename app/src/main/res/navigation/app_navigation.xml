@@ -21,4 +21,9 @@
         android:name="com.otsembo.kimondo.ui.main.marsrover.MarsRoverFragment"
         android:label="@string/rover_page"
         tools:layout="@layout/fragment_mars_rover_list"/>
+    <fragment
+        android:id="@+id/fragment_search"
+        android:name="com.otsembo.kimondo.ui.main.search.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search"/>
 </navigation>
