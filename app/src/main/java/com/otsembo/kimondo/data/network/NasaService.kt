@@ -19,7 +19,10 @@ interface NasaService {
     @GET("/mars-photos/api/v1/rovers/curiosity/photos")
     suspend fun getMarsPhotos(@Query("sol") sol: Int =  1000): MarsRoverPhotos
 
-    @GET("/search?q=asteroid")
-    suspend fun searchNasa(@Query("q") query: String): NasaSearch
+}
 
+interface NasaImageService {
+
+    @GET("/search")
+    suspend fun searchNasa(@Query("q") query: String): NasaSearch
 }

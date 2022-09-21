@@ -30,5 +30,9 @@ class MainActivity : AppCompatActivity() {
         binding.appNavigationView.setupWithNavController(navController)
     }
 
+    // TODO 1: SHOW DETAIL PAGES FOR EVERY LIST OF ITEMS
+    // TODO 2: ADD DATE FUNCTIONALITY (view VALENTINE DAY's nasa photos) - NASA SERVICE
+
+
 
 }

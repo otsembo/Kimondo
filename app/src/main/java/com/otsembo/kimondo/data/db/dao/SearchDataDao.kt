@@ -17,8 +17,8 @@ interface SearchDataDao {
     @Delete
     suspend fun deleteSearchData(searchData: SearchData)
 
-    @Query("SELECT * FROM search_data WHERE title LIKE :search_term")
-    fun searchInfo(search_term: String): LiveData<List<SearchData>>
+    @Query("SELECT * FROM search_data ORDER BY id DESC LIMIT 20")
+    fun searchInfo(): LiveData<List<SearchData>>
 }
 
 @Dao

@@ -36,6 +36,10 @@ class SearchFragment : Fragment() {
         val searchView = searchItem.actionView as SearchView
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
+                query?.let { searchQuery ->
+                    viewModel.query.value = searchQuery
+                    viewModel.searchNasa()
+                }
                 return true
             }
 
@@ -48,7 +52,7 @@ class SearchFragment : Fragment() {
 
     private fun initVM(){
         appDb = AppDatabase.getDB(requireContext().applicationContext)
-        searchRepository = SearchRepository(searchDataDao = appDb.searchDataDao(), albumDao = appDb.albumDao(), keywordsDao = appDb.keywordDao(), nasaService = RetrofitUtils.nasaService)
+        searchRepository = SearchRepository(searchDataDao = appDb.searchDataDao(), albumDao = appDb.albumDao(), keywordsDao = appDb.keywordDao(), nasaImageService = RetrofitUtils.nasaImageService)
         viewModel = SearchVM(searchRepository)
         binding.viewModel = viewModel
     }

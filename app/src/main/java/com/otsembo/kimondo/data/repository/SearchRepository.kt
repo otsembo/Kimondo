@@ -5,17 +5,17 @@ import com.otsembo.kimondo.data.db.dao.AlbumDao
 import com.otsembo.kimondo.data.db.dao.KeywordsDao
 import com.otsembo.kimondo.data.db.dao.SearchDataDao
 import com.otsembo.kimondo.data.model.SearchData
-import com.otsembo.kimondo.data.network.NasaService
+import com.otsembo.kimondo.data.network.NasaImageService
 
 class SearchRepository(
     private val searchDataDao: SearchDataDao,
     private val albumDao: AlbumDao,
     private val keywordsDao: KeywordsDao,
-    private val nasaService: NasaService
+    private val nasaImageService: NasaImageService
 ) {
 
     suspend fun retrieveSearchResults(query: String){
-        val nasaSearch = nasaService.searchNasa(query = query)
+        val nasaSearch = nasaImageService.searchNasa(query = query)
         nasaSearch.collection.items.forEach { item ->
             item.data.forEach { data ->
                 val searchData = SearchData(
@@ -35,6 +35,6 @@ class SearchRepository(
         }
     }
 
-    fun displaySearchData(query: String): LiveData<List<SearchData>> = searchDataDao.searchInfo(search_term = query)
+    fun displaySearchData(): LiveData<List<SearchData>> = searchDataDao.searchInfo()
 
 }

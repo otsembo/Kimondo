@@ -1,6 +1,7 @@
 package com.otsembo.kimondo.ui.binders
 
 import android.util.Log
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
@@ -9,6 +10,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.google.android.material.chip.Chip
+import com.google.android.material.progressindicator.LinearProgressIndicator
 import com.otsembo.kimondo.R
 import com.otsembo.kimondo.data.model.NearEarthObject
 import com.otsembo.kimondo.data.model.RoverPhoto
@@ -55,4 +57,11 @@ fun RecyclerView.setRoverPhotoList(photos: List<RoverPhoto>?){
 @BindingAdapter("searchList")
 fun RecyclerView.setSearchList(searchDataList: List<SearchData>?){
     (this.adapter as SearchDataAdapter).submitList(searchDataList)
+}
+
+@BindingAdapter("isLoading")
+fun LinearProgressIndicator.setLoading(loading: Boolean?){
+    loading?.let { currentlyLoading ->
+        this.visibility = if(currentlyLoading) View.VISIBLE else View.GONE
+    }
 }

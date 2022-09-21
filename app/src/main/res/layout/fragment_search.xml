@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:padding="@dimen/global_margin">
 
-        <com.google.android.material.progressindicator.CircularProgressIndicator
+        <com.google.android.material.progressindicator.LinearProgressIndicator
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/loader"
@@ -24,7 +24,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginBottom="@dimen/global_margin"
             android:indeterminate="true"
-            android:indeterminateBehavior="repeat"/>
+            android:indeterminateBehavior="repeat"
+            app:isLoading="@{viewModel.isLoading}"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
