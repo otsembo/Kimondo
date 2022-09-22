@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search">TAFUTA</string>
+
+    <!--    PAGE TITLES-->
+    <string name="home_page">NYUMBANI</string>
+    <string name="search_page">TAFUTA</string>
+    <string name="rover_page">PICHA ZA MARS ROVER</string>
+    <string name="neos_page">VIMONDO KARIBU NA DUNIA</string>
+
+    <!--    MENU STRINGS-->
+    <string name="menu_home">NYUMBANI</string>
+    <string name="menu_search">TAFUTA</string>
+    <string name="menu_neos">VIMONDO KARIBU NA DUNIA</string>
+    <string name="menu_rover_photos">PICHA ZA MARS ROVER</string>
+
+    <!--    APOD STRINGS-->
+    <string name="apod_desc">Picha ya Siku ya Astronomia</string>
+
+    <!--    NEOWs STRINGS-->
+    <string name="hazardous">HATARI</string>
+    <string name="non_hazardous">ISIYO NA MADHARA</string>
+    <string name="absolute_magnitude">UWEZO KABISA: %f</string>
+
+    <!--    MARS ROVER STRINGS-->
+    <string name="photo_desc">PICHA ZA MARS ROVER</string>
+</resources>

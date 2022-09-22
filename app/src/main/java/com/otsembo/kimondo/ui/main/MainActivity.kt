@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity() {
         val appBarConfig = AppBarConfiguration(navController.graph, binding.rootDrawer)
         setSupportActionBar(binding.appToolbar)
         binding.appToolbar.setupWithNavController(navController, appBarConfig)
-        binding.appNavigationView.setupWithNavController(navController)
+        binding.appNavigationView?.setupWithNavController(navController)
+        binding.navigationRail?.setupWithNavController(navController)
     }
 
     // TODO 1: SHOW DETAIL PAGES FOR EVERY LIST OF ITEMS
