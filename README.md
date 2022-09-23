@@ -32,7 +32,7 @@ Take a peek at what am working on:
 
 HOME | NEO PAGE | ROVER PHOTOS |
 ---- | -------- | ------------ |
-<img src="screens/phone/home.png" width="150"/> | <img src="screens/phone/neo.png" width="150"/> | <img src="screens/phone/rover.png" width="150"/> |
+<img src="screens/phone/home.png" width="150"/> | <img src="screens/phone/neos.png" width="150"/> | <img src="screens/phone/rover.png" width="150"/> |
 
 
 * TABLET
