@@ -20,7 +20,7 @@ object RetrofitUtils {
     private fun setUpApiKeyInterceptor(chain: Interceptor.Chain) = chain.proceed(
         chain.request()
             .newBuilder()
-            .url(chain.request().url.newBuilder().addQueryParameter("api_key","DEMO_KEY").build())
+            .url(chain.request().url.newBuilder().addQueryParameter("api_key","7fLcGLQjB7M69kdvqt7JsAsIMqfQmjUmzNujXFVM").build())
             .build()
     )
 
@@ -37,7 +37,8 @@ object RetrofitUtils {
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .baseUrl(NASA_IMAGES_BASE_URL)
         .client(OkHttpClient.Builder()
-            .readTimeout(2000L, TimeUnit.MILLISECONDS).build())
+            .readTimeout(2000L, TimeUnit.MILLISECONDS)
+            .addInterceptor { block -> setUpApiKeyInterceptor(block) }.build())
         .build()
 
 

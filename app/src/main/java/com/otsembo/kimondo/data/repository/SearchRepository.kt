@@ -37,4 +37,8 @@ class SearchRepository(
 
     fun displaySearchData(): LiveData<List<SearchData>> = searchDataDao.searchInfo()
 
+    suspend fun clearSearchHistory(){
+        searchDataDao.clearSearchHistory()
+    }
+
 }

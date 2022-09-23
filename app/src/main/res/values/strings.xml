@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Kimondo</string>
+    <string name="app_name" translatable="false">Kimondo</string>
     <string name="search">SEARCH</string>
 
 <!--    PAGE TITLES-->
@@ -24,4 +24,8 @@
 
 <!--    MARS ROVER STRINGS-->
     <string name="photo_desc">Mars rover image</string>
+
+<!--    HEADER BANNER-->
+   <string name="banner_description" translatable="false">ASTEROID ECLIPSE</string>
+
 </resources>

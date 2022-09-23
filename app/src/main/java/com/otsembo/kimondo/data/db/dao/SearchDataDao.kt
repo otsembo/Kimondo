@@ -15,10 +15,13 @@ interface SearchDataDao {
     suspend fun updateSearchData(searchData: SearchData)
 
     @Delete
-    suspend fun deleteSearchData(searchData: SearchData)
+    suspend fun clearSearchHistory(searchData: SearchData)
 
     @Query("SELECT * FROM search_data ORDER BY id DESC LIMIT 20")
     fun searchInfo(): LiveData<List<SearchData>>
+
+    @Query("DELETE FROM search_data")
+    suspend fun clearSearchHistory()
 }
 
 @Dao
