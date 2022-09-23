@@ -32,14 +32,14 @@ Take a peek at what am working on:
 
 HOME | NEO PAGE | ROVER PHOTOS |
 ---- | -------- | ------------ |
-<img src="screens/phone/home.png" width="150"/> | <img src="screens/phone/neos.png" width="150"/> | <img src="screens/phone/rover.png" width="150"/> |
+<img src="screens/phone/home.png"/> | <img src="screens/phone/neos.png" /> | <img src="screens/phone/rover.png" /> |
 
 
 * TABLET
 
 HOME | NEO PAGE | ROVER PHOTOS |
 ---- | -------- | ------------ |
-<img src="screens/tablet/home.png" width="150"/> | <img src="screens/tablet/neo.png" width="150"/> | <img src="screens/tablet/rover.png" width="150"/> |
+<img src="screens/tablet/home.png" /> | <img src="screens/tablet/neo.png"/> | <img src="screens/tablet/rover.png"/> |
 
 
 ## LICENSE
