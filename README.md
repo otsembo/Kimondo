@@ -30,16 +30,16 @@ Take a peek at what am working on:
 
 * PHONE
 
-HOME | NEO PAGE | ROVER PHOTOS |
----- | -------- | ------------ |
-<img src="screens/phone/home.png"/> | <img src="screens/phone/neos.png" /> | <img src="screens/phone/rover.png" /> |
+| HOME                                | NEO PAGE                             | ROVER PHOTOS                          |
+|-------------------------------------|--------------------------------------|---------------------------------------|
+| <img src="screens/phone/home.png"/> | <img src="screens/phone/neos.png" /> | <img src="screens/phone/rover.png" /> |
 
 
 * TABLET
 
-HOME | NEO PAGE | ROVER PHOTOS |
----- | -------- | ------------ |
-<img src="screens/tablet/home.png" /> | <img src="screens/tablet/neo.png"/> | <img src="screens/tablet/rover.png"/> |
+| HOME                                  | NEO PAGE                            | ROVER PHOTOS                          |
+|---------------------------------------|-------------------------------------|---------------------------------------|
+| <img src="screens/tablet/home.png" /> | <img src="screens/tablet/neo.png"/> | <img src="screens/tablet/rover.png"/> |
 
 
 ## LICENSE

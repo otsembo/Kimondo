@@ -7,7 +7,7 @@ import com.otsembo.kimondo.data.network.NasaService
 
 class APODRepository (private val nasaService: NasaService, private val dao: ApodDao) {
 
-    suspend fun fetchFromNetwork(){
+    suspend fun fetchFromNetwork(): Apod{
         // retrieve from network
         val apodDto = nasaService.getAPOD()
         // convert ApodDTO to Apod
@@ -20,9 +20,10 @@ class APODRepository (private val nasaService: NasaService, private val dao: Apo
         )
         // save apod to db
         saveApodToDB(apod = apod)
+        return apod
     }
 
-    suspend fun saveApodToDB(apod: Apod){
+    private suspend fun saveApodToDB(apod: Apod){
         dao.insertApod(apod = apod)
     }
 
