@@ -10,70 +10,81 @@
     </data>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="2">
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loading_indicator"
+            android:indeterminate="true"
+            android:indeterminateBehavior="repeat"
+            app:apodLoader="@{viewModel.apodStatus}"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/imgApod"
-            android:contentDescription="@string/apod_desc"
-            tools:src="@tools:sample/backgrounds/scenic"
-            android:scaleType="centerCrop"
-            app:kimondoImage="@{viewModel.apod.hdurl}" />
+            android:weightSum="2">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/image_text_vertical_margin"
-                android:layout_marginStart="@dimen/global_margin"
-                android:id="@+id/txtApodName"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="@tools:sample/full_names"
-                android:text="@{viewModel.apod.title}"
-                style="@style/AppTitle" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/text_text_vertical_margin"
-                android:layout_marginStart="@dimen/global_margin"
-                android:id="@+id/txtApodDate"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtApodName"
-                tools:text="@tools:sample/date/ddmmyy"
-                android:text="@{viewModel.apod.date}"
-                style="@style/AppSubTitle" />
-
-            <TextView
+            <ImageView
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/apod_explanation_date_margin"
-                android:layout_marginStart="@dimen/global_margin"
-                android:layout_marginEnd="@dimen/global_margin"
-                android:layout_marginBottom="@dimen/global_margin"
-                android:id="@+id/txtApodExplanation"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtApodDate"
-                tools:text="@tools:sample/lorem/random"
-                android:text="@{viewModel.apod.explanation}"
-                style="@style/AppBody"
-                android:scrollbars="vertical"
-                android:scrollbarStyle="insideOverlay" />
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/imgApod"
+                android:contentDescription="@string/apod_desc"
+                tools:src="@tools:sample/backgrounds/scenic"
+                android:scaleType="centerCrop"
+                app:kimondoImage="@{viewModel.apod.hdurl}" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_text_vertical_margin"
+                    android:layout_marginStart="@dimen/global_margin"
+                    android:id="@+id/txtApodName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@tools:sample/full_names"
+                    android:text="@{viewModel.apod.title}"
+                    style="@style/AppTitle" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_text_vertical_margin"
+                    android:layout_marginStart="@dimen/global_margin"
+                    android:id="@+id/txtApodDate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtApodName"
+                    tools:text="@tools:sample/date/ddmmyy"
+                    android:text="@{viewModel.apod.date}"
+                    style="@style/AppSubTitle" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/apod_explanation_date_margin"
+                    android:layout_marginStart="@dimen/global_margin"
+                    android:layout_marginEnd="@dimen/global_margin"
+                    android:layout_marginBottom="@dimen/global_margin"
+                    android:id="@+id/txtApodExplanation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtApodDate"
+                    tools:text="@tools:sample/lorem/random"
+                    android:text="@{viewModel.apod.explanation}"
+                    style="@style/AppBody"
+                    android:scrollbars="vertical"
+                    android:scrollbarStyle="insideOverlay" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     </LinearLayout>
 </layout>

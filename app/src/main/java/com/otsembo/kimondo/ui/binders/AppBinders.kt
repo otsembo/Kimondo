@@ -12,6 +12,8 @@ import coil.load
 import com.google.android.material.chip.Chip
 import com.google.android.material.progressindicator.LinearProgressIndicator
 import com.otsembo.kimondo.R
+import com.otsembo.kimondo.common.AppResource
+import com.otsembo.kimondo.data.model.Apod
 import com.otsembo.kimondo.data.model.NearEarthObject
 import com.otsembo.kimondo.data.model.RoverPhoto
 import com.otsembo.kimondo.data.model.SearchData
@@ -63,5 +65,13 @@ fun RecyclerView.setSearchList(searchDataList: List<SearchData>?){
 fun LinearProgressIndicator.setLoading(loading: Boolean?){
     loading?.let { currentlyLoading ->
         this.visibility = if(currentlyLoading) View.VISIBLE else View.GONE
+    }
+}
+
+@BindingAdapter("apodLoader")
+fun LinearProgressIndicator.setApodLoading(apodResource: AppResource<Apod>){
+    this.visibility = when(apodResource){
+        is AppResource.Loading -> View.VISIBLE
+        else -> View.GONE
     }
 }

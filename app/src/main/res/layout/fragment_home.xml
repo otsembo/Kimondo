@@ -14,13 +14,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loading_indicator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:indeterminate="true"
+            android:indeterminateBehavior="repeat"
+            app:apodLoader="@{viewModel.apodStatus}"/>
+
         <ImageView
             android:layout_width="0dp"
             android:layout_height="@dimen/apod_height"
             android:id="@+id/imgApod"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loading_indicator"
             android:contentDescription="@string/apod_desc"
             tools:src="@tools:sample/backgrounds/scenic"
             android:scaleType="centerCrop"
