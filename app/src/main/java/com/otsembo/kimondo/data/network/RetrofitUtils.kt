@@ -28,7 +28,7 @@ object RetrofitUtils {
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .baseUrl(BASE_URL)
         .client(OkHttpClient.Builder()
-            .readTimeout(2000L, TimeUnit.MILLISECONDS)
+            .readTimeout(5000L, TimeUnit.MILLISECONDS)
             .addInterceptor { block -> setUpApiKeyInterceptor(block) }.build())
         .build()
 
