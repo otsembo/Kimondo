@@ -25,6 +25,9 @@
 <!--    MARS ROVER STRINGS-->
     <string name="photo_desc">Mars rover image</string>
 
+<!--    SEARCH STRINGS-->
+    <string name="nothing_found">Nothing to show you.\nClick the search button to find something.</string>
+
 <!--    HEADER BANNER-->
    <string name="banner_description" translatable="false">ASTEROID ECLIPSE</string>
 

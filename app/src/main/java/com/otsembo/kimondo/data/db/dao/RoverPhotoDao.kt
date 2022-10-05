@@ -16,7 +16,7 @@ interface RoverPhotoDao {
     @Delete
     suspend fun deleteRoverPhoto(photo: RoverPhoto)
 
-    @Query("SELECT * FROM mars_photos")
+    @Query("SELECT * FROM mars_photos ORDER BY id DESC")
     fun viewMarsPhotos(): LiveData<List<RoverPhoto>>
 
     @Query("DELETE from mars_photos")

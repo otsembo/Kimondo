@@ -24,4 +24,7 @@
 
     <!--    MARS ROVER STRINGS-->
     <string name="photo_desc">PICHA ZA MARS ROVER</string>
+
+    <!--    SEARCH STRINGS-->
+    <string name="nothing_found">Hakuna cha kukuonyesha.\nBofya kitufe cha kutafuta ili kupata kitu.</string>
 </resources>

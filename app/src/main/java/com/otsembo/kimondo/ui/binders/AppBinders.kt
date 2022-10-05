@@ -3,6 +3,7 @@ package com.otsembo.kimondo.ui.binders
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.graphics.drawable.DrawableCompat
@@ -74,4 +75,9 @@ fun LinearProgressIndicator.setApodLoading(apodResource: AppResource<Apod>){
         is AppResource.Loading -> View.VISIBLE
         else -> View.GONE
     }
+}
+
+@BindingAdapter("queryList")
+fun LinearLayout.setQueryList(queryList: List<*>?){
+    this.visibility =  if (queryList?.isEmpty() == true) View.VISIBLE else View.GONE
 }

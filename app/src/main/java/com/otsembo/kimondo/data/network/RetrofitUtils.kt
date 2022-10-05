@@ -37,8 +37,8 @@ object RetrofitUtils {
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .baseUrl(NASA_IMAGES_BASE_URL)
         .client(OkHttpClient.Builder()
-            .readTimeout(2000L, TimeUnit.MILLISECONDS)
-            .addInterceptor { block -> setUpApiKeyInterceptor(block) }.build())
+            .readTimeout(5000L, TimeUnit.MILLISECONDS)
+            .build())
         .build()
 
 
