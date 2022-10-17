@@ -5,6 +5,7 @@ import com.otsembo.kimondo.data.db.AppDatabase
 import com.otsembo.kimondo.data.db.dao.NearEarthObjectDao
 import com.otsembo.kimondo.data.model.NearEarthObject
 import com.otsembo.kimondo.data.network.NasaService
+import kotlinx.coroutines.flow.StateFlow
 
 class NEOWSRepository(private val dao: NearEarthObjectDao, private val nasaService: NasaService) {
 

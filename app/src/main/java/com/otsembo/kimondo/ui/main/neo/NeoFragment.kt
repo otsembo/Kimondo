@@ -9,6 +9,7 @@ import com.otsembo.kimondo.data.db.AppDatabase
 import com.otsembo.kimondo.data.network.RetrofitUtils
 import com.otsembo.kimondo.data.repository.NEOWSRepository
 import com.otsembo.kimondo.databinding.FragmentNeoListBinding
+import kotlinx.coroutines.flow.onEach
 
 class NeoFragment : Fragment() {
 
@@ -31,6 +32,10 @@ class NeoFragment : Fragment() {
         repository = NEOWSRepository(dao = appDb.neoDao(), nasaService = RetrofitUtils.nasaService)
         viewModel = NeoVM(repository)
         binding.viewmodel = viewModel
+
+        viewModel.near_earth_objects.onEach {
+
+        }
     }
 
 }

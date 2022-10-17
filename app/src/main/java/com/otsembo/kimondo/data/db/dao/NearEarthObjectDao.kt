@@ -3,6 +3,7 @@ package com.otsembo.kimondo.data.db.dao
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.otsembo.kimondo.data.model.NearEarthObject
+import kotlinx.coroutines.flow.StateFlow
 
 @Dao
 interface NearEarthObjectDao {
